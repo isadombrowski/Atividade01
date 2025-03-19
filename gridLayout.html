@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Grid Layout</title>
+  <title>Atividade01 - Raça Pug</title>
   <style>
-    /* Definição do contêiner da grade */
+    /* Estilo do contêiner principal */
     .container {
       display: grid;
       grid-template-areas:
@@ -14,12 +14,12 @@
         "footer footer";
       grid-template-columns: 1fr 3fr;
       gap: 5px;
-      background-color: #2196F3;
+      background-color: #ac7746;
       padding: 5px;
     }
 
     /* Estilo padrão para os itens da grade */
-    .container > div {
+    .container > * {
       background-color: rgba(255, 255, 255, 0.8);
       padding: 10px;
     }
@@ -37,29 +37,61 @@
     }
     footer {
       grid-area: footer;
+      text-align: center;
+    }
+
+    /* Centralizando e estilizando a imagem */
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60vh; /* Ajuste para não ocupar toda a tela */
+      background-color: #ffe0b2; /* Cor de fundo ao redor da imagem */
+      padding: 20px;
+      /* Removido o border-radius */
+    }
+
+    .image-container img {
+      border: 5px solid #ff9800; /* Borda personalizada para a imagem */
+      /* Removido o border-radius */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2196F3;
+      display: block;
+      margin-bottom: 5px;
+    }
+    nav a:hover {
+      color: #0056b3;
     }
   </style>
 </head>
 <body>
-
-  <h1>CSS Grid Layout</h1>
-
-  <p>The Grid Layout Module offers a grid-based layout system, with rows and columns.</p>
-  <p>The Grid Layout Module makes it easy to design complex and responsive web pages without using floats and positioning:</p>
-
-  <div class="container">
-    <header><h2>My Header</h2></header>
-    <nav>
-      <a href="#">Link 1</a><br>
-      <a href="#">Link 2</a><br>
-      <a href="#">Link 3</a>
-    </nav>
-    <main>
-      <h3>Lorem Ipsum</h3>
-      <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Ridiculus sit nisl laoreet facilisis aliquet. Potenti dignissim litora eget montes rhoncus sapien neque urna. Cursus libero sapien integer magnis ligula lobortis quam ut.</p>
-    </main>
-    <footer><h4>Footer</h4></footer>
+  <h1>Raça Pug</h1>
+  
+  <!-- Centralizando a imagem com cor de fundo -->
+  <div class="image-container">
+    <img src="cute-pug-smelling-pumpkin.jpg" alt="Descrição da imagem" width="500" height="300">
   </div>
 
+  <!-- Estrutura principal do site -->
+  <div class="container">
+    <header><h2>Pugs</h2></header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Quem Somos</a>
+      <a href="#">Contato</a>
+    </nav>
+    <main>
+      <h3>Sobre</h3>
+      <p>Pug é uma raça de cão de companhia de pequeno porte, com focinho achatado e cauda enrolada.</p>
+      <p>São cães braquicefálicos, ou seja, têm o focinho "achatado".</p>
+      <p>Cães com essa característica têm o sistema respiratório superior comprimido e, portanto, não toleram muito exercício físico.</p>
+    </main>
+    <footer>
+      <p>&copy; 2025 - Informações sobre Pugs</p>
+    </footer>
+  </div>
 </body>
 </html>
